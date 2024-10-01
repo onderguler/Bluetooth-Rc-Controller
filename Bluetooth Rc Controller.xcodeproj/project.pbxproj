@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7D92E612C68EF6A00860A35 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D92E602C68EF6A00860A35 /* SettingsViewController.swift */; };
+		C7D92E652C68F00A00860A35 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D92E632C68F00A00860A35 /* SettingsTableViewCell.swift */; };
+		C7D92E662C68F00A00860A35 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C7D92E642C68F00A00860A35 /* SettingsTableViewCell.xib */; };
+		C7D92E682C68F2A700860A35 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D92E672C68F2A700860A35 /* BluetoothManager.swift */; };
 		C7DF35162C68E590007402AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DF35152C68E590007402AC /* AppDelegate.swift */; };
 		C7DF35182C68E590007402AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DF35172C68E590007402AC /* SceneDelegate.swift */; };
 		C7DF351A2C68E590007402AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DF35192C68E590007402AC /* ViewController.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7D92E602C68EF6A00860A35 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C7D92E632C68F00A00860A35 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		C7D92E642C68F00A00860A35 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
+		C7D92E672C68F2A700860A35 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		C7DF35122C68E590007402AC /* Bluetooth Rc Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bluetooth Rc Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DF35152C68E590007402AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7DF35172C68E590007402AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C7D92E622C68EFE900860A35 /* SettingsCell */ = {
+			isa = PBXGroup;
+			children = (
+				C7D92E632C68F00A00860A35 /* SettingsTableViewCell.swift */,
+				C7D92E642C68F00A00860A35 /* SettingsTableViewCell.xib */,
+			);
+			path = SettingsCell;
+			sourceTree = "<group>";
+		};
 		C7DF35092C68E590007402AC = {
 			isa = PBXGroup;
 			children = (
@@ -59,10 +76,13 @@
 				C7DF35152C68E590007402AC /* AppDelegate.swift */,
 				C7DF35172C68E590007402AC /* SceneDelegate.swift */,
 				C7DF35192C68E590007402AC /* ViewController.swift */,
+				C7D92E602C68EF6A00860A35 /* SettingsViewController.swift */,
+				C7D92E622C68EFE900860A35 /* SettingsCell */,
 				C7DF351B2C68E590007402AC /* Main.storyboard */,
 				C7DF351E2C68E591007402AC /* Assets.xcassets */,
 				C7DF35202C68E591007402AC /* LaunchScreen.storyboard */,
 				C7DF35232C68E591007402AC /* Info.plist */,
+				C7D92E672C68F2A700860A35 /* BluetoothManager.swift */,
 			);
 			path = "Bluetooth Rc Controller";
 			sourceTree = "<group>";
@@ -127,6 +147,7 @@
 			files = (
 				C7DF351F2C68E591007402AC /* Assets.xcassets in Resources */,
 				C7DF35222C68E591007402AC /* Base in Resources */,
+				C7D92E662C68F00A00860A35 /* SettingsTableViewCell.xib in Resources */,
 				C7DF351D2C68E590007402AC /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +162,9 @@
 				C7DF351A2C68E590007402AC /* ViewController.swift in Sources */,
 				C7DF35162C68E590007402AC /* AppDelegate.swift in Sources */,
 				C7DF35182C68E590007402AC /* SceneDelegate.swift in Sources */,
+				C7D92E652C68F00A00860A35 /* SettingsTableViewCell.swift in Sources */,
+				C7D92E682C68F2A700860A35 /* BluetoothManager.swift in Sources */,
+				C7D92E612C68EF6A00860A35 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,11 +319,14 @@
 				DEVELOPMENT_TEAM = WL9VHPS825;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bluetooth Rc Controller/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bu uygulama Bluetooth cihazlarına bağlanmak için izin istiyor.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Bu uygulama Bluetooth cihazlarına bağlanmak için izin istiyor.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,11 +350,14 @@
 				DEVELOPMENT_TEAM = WL9VHPS825;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bluetooth Rc Controller/Info.plist";
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Bu uygulama Bluetooth cihazlarına bağlanmak için izin istiyor.";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Bu uygulama Bluetooth cihazlarına bağlanmak için izin istiyor.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
